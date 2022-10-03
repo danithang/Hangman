@@ -18,12 +18,9 @@ lives = 6
 from hangman_art import logo, stages
 print(logo)
 
-#Testing code
-#print(f'Pssst, the solution is {chosen_word}.')
-
 #Create blanks
 display = []
-#establishing space for the letters to go
+#establishing space for each of the letters in each word
 for _ in range(word_length):
     display += "_"
 
@@ -39,7 +36,7 @@ while not end_of_game:
     #Check guessed letter...position is turned into an integer to find the postion in the word
     for position in range(word_length):
         letter = chosen_word[position]
-#replacing right letter with position of where it goes
+    #replacing right letter with position of where it goes
         if letter == guess:
             display[position] = letter
 
@@ -62,6 +59,6 @@ while not end_of_game:
         end_of_game = True
         print("You win.")
 
-    #TODO-2: - Import the stages from hangman_art.py and make this error go away.
+    #Import the stages from hangman_art.py and make this error go away.
     print(stages[lives])
 
