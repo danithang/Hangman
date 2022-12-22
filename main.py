@@ -1,4 +1,3 @@
-#Step 5
 from replit import clear
 
 import random
